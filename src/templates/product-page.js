@@ -6,6 +6,7 @@ import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
 import Pricing from '../components/Pricing'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import animateHTML from '../utils/animateHTML.js'
 
 export const ProductPageTemplate = ({
   image,
@@ -19,7 +20,7 @@ export const ProductPageTemplate = ({
   pricing,
 }) => (
   <section className="section section--gradient">
-    <div className="container">
+    <div className="container fade-in-element">
       <div className="section">
         <div className="columns">
           <div className="column is-10 is-offset-1">
@@ -37,8 +38,6 @@ export const ProductPageTemplate = ({
                 <h2
                   className="has-text-weight-bold is-size-1"
                   style={{
-                    boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-                    backgroundColor: '#f40',
                     color: 'white',
                     padding: '1rem',
                   }}

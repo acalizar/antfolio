@@ -40,3 +40,17 @@ $primary-invert: $kaldi-red-invert
   margin-top: 0 !important
 
 @import "~bulma"
+
+.section
+    padding: .5rem
+
+@keyframes fade-in 
+  0%
+     opacity: 0 
+     transform: translateY(50px)
+  100%
+     opacity: 1
+
+
+.fade-in-element 
+  animation: fade-in .5s

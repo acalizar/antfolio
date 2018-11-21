@@ -1,5 +1,5 @@
 @import "~bulma/sass/utilities/initial-variables"
-
+@import url('https://fonts.googleapis.com/css?family=Poppins')
 // Config vars
 $kaldi-red: #FD461E
 $kaldi-red-invert: #fff
@@ -41,13 +41,28 @@ $primary-invert: $kaldi-red-invert
 
 @import "~bulma"
 
+// Customizations
+*
+  font-family: 'Poppins'
+  font-weight: 400
+
+.content h1
+  font-size: 1.5em !important
+  font-weight: 400 !important
+  margin: 10px 0px !important
+
+.content h3 
+  margin: 10px 0px !important
+  font-size: 1.2em !important
+  font-weight: 400 !important
+
 .section
     padding: .5rem
 
 @keyframes fade-in 
   0%
      opacity: 0 
-     transform: translateY(50px)
+     transform: translateX(-25px)
   100%
      opacity: 1
 

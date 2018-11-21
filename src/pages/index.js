@@ -2,18 +2,28 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import styled from 'styled-components'
 
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
+    const Wrapper = styled.div `
+        & .content .title{
+          text-align:center;
+        }
+    `
 
     return (
       <Layout>
+        <Wrapper>
         <section className="section">
-          <div className="container">
+          <div className="container fade-in-element">
             <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
+            <div className="title">
+              <h1 className="has-text-weight-bold is-size-2">Anthony Calizar</h1>
+              <h3>Design & Development Professional</h3>
+            </div>
             </div>
             {posts
               .map(({ node: post }) => (
@@ -41,6 +51,7 @@ export default class IndexPage extends React.Component {
               ))}
           </div>
         </section>
+        </Wrapper>
       </Layout>
     )
   }

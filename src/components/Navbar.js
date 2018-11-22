@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/icon.png'
+import github from '../uploads/github-icon.svg'
+import logo from '../uploads/icon.png'
 import styled from "styled-components"
 
 const Nav = styled.div`

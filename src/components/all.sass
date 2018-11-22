@@ -55,9 +55,34 @@ $primary-invert: $kaldi-red-invert
   margin: 10px 0px !important
   font-size: 1.2em !important
   font-weight: 400 !important
-
+.header-image-container
+  margin: 0em -50vw
+  transform-origin: 0
+  transform: skewY(-12deg)
+  overflow: hidden
+.header-image-container .full-width-image-container
+  transform-origin: 0
+  transform: skewY(12deg)    
+  margin: 0em -50vw
+  height: 600px
+.navbar
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%) //FF3.6-15 
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0) 100%) //Chrome10-25,Safari5.1-6
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0) 100%) // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26000000', endColorstr='#00000000',GradientType=0 ) // IE6-9
+.navbar-item, .navbar-link
+  color: rgba(255,255,255,.75)
+  font-size: 1.4em
+  text-shadow: 0px 0px 50px #000000
+.navbar-item img
+  max-width: 30px
+  max-height: 30px
+  width: 30px
+  height: 30px
+a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.is-active
+  color: #ffffff
 .section
-    padding: .5rem
+  padding: .5rem
 
 @keyframes fade-in 
   0%

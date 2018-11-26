@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import HeaderOverlay from '../components/HeaderOverlay'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import styled from 'styled-components'
@@ -8,49 +9,83 @@ export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
-    const Wrapper = styled.div `
+
+    const Wrapper = styled.div`
         & .content .title{
           text-align:center;
         }
+        .column > .content {
+          border: none;
+          text-align: center;
+          position: relative;
+          overflow: hidden;
+          min-height: 350px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          box-shadow: 0px 0px 50px -25px #000000;
+          border-radius: 10px;
+          border: 1px solid #ededed;
+        }
+        .thumbnail{
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: -1;
+          background-size: cover;
+          transform: scale(1.2)
+        }
+        .thumbnail::after{
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: rgba(255,255,255,.90);
+        }
     `
-
     return (
       <Layout>
         <Wrapper>
-        <section className="section">
-          <div className="container fade-in-element">
+          <div className="fade-in-element">
             <div className="content">
-            <div className="title">
-              <h1 className="has-text-weight-bold is-size-2">Anthony Calizar</h1>
-              <h3>Design & Development Professional</h3>
+              <HeaderOverlay title={"Anthony Calizar"} subtitle={"Design & Development Professional"} />
             </div>
-            </div>
-            {posts
-              .map(({ node: post }) => (
-                <div
-                  className="content"
-                  style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
-                  key={post.id}
-                >
-                  <p>
-                    <Link className="has-text-primary" to={post.fields.slug}>
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <small>{post.frontmatter.date}</small>
-                  </p>
-                  <p>
-                    {post.excerpt}
-                    <br />
-                    <br />
-                    <Link className="button is-small" to={post.fields.slug}>
-                      Keep Reading →
-                    </Link>
-                  </p>
+            <section className="section">
+              <div className="container">
+                <div className="content">
+                  <div className="main">
+                    <div className="psuedo-bg"></div>
+                    <div className="columns is-multiline">
+                      {posts
+                        .map(({ node: post }, index) => (
+                          <div className="column is-4" key={index}>
+                            <div className="content" style={{ padding: '2em 3em' }} key={post.id}>
+                            <div className="thumbnail" style={{ 'backgroundImage' : 'url(' + post.frontmatter.thumbnail + ')'  }}></div>
+                              <h2>
+                                <Link to={post.fields.slug}>
+                                  {post.frontmatter.title}
+                                </Link>
+                              </h2>
+                              <p>
+                                {post.frontmatter.description}
+                              </p>
+                              <p>
+                                <Link className="button" to={post.fields.slug}>View →</Link>
+                              </p>
+                            </div>
+                          </div>
+                        ))
+                      }
+                    </div>
+                  </div>
                 </div>
-              ))}
+              </div>
+            </section>
           </div>
-        </section>
         </Wrapper>
       </Layout>
     )
@@ -69,7 +104,7 @@ export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] },
-      filter: { frontmatter: { templateKey: { eq: "blog-post" } }}
+      filter: { frontmatter: { templateKey: { eq: "project-page" } }}
     ) {
       edges {
         node {
@@ -80,6 +115,8 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            description
+            thumbnail
             templateKey
             date(formatString: "MMMM DD, YYYY")
           }

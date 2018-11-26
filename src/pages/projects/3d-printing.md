@@ -3,7 +3,7 @@ templateKey: project-page
 title: 3D Printing
 date: 2018-09-11T15:04:10.000Z
 description: Designed and 3D printed bridges for billiards
-thumbnail: '/uploads/Laptop-Phone.jpg'
+thumbnail: './uploads/Laptop-Phone.jpg'
 tags:
   - design
   - develop

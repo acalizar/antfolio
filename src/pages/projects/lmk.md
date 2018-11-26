@@ -3,7 +3,7 @@ templateKey: project-page
 title: LMK
 date: 2018-11-11T15:04:10.000Z
 description: This is a small application that I created using Electron.js
-thumbnail: './uploads/Laptop-Phone.jpg'
+thumbnail: '/static/uploads/Laptop-Phone.jpg'
 tags:
   - design
   - develop

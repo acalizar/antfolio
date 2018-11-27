@@ -53,19 +53,34 @@ $primary-invert: $kaldi-red-invert
 
 *
   font-family: 'Poppins', 'Helvetica' ,sans-serif
+
+
 a, button
   transition: ease-in-out all .2s
-p
-  font-size: 18px
+p, div, ul, li, a
+  font-size: 20px
 .button
   border-radius: 100px
-  padding: 20px
+  padding: 10px 20px
   width: 100%
   max-width: 200px
+  height: auto
+  font-weight: bold
+
+.button.is-link
+  border: 1px solid #dddddd
+  color: #ffffff
+
+.button.is-link:hover
+  border: 1px solid #dddddd
+  color: #ffffff
+  background-color: #333333
+
 .button:hover
   color: #ffffff
   background-color: #333333
   border: 1px solid #ffffff
+
 .content h1
   font-size: 1.5em 
   font-weight: 400 
@@ -79,36 +94,27 @@ p
   margin-top: 10px
 
 
-.content .title
+.title
   z-index: 100
   position: relative
   padding: 200px 15px 50px
-.content .main 
-  position: relative
-.content .main .psuedo-bg
-  position: absolute
-  top: -50px
-  right: 0
-  left: 0
-  bottom: -20vh
-  overflow: hidden    
-  margin: 0 -50vw
-  z-index: -1
+  
+.main::before
+    content: ""
+    background-color: #ffffff
+    position: absolute
+    top: 550px
+    bottom: -1000px
+    left: 0
+    right: 0
+    z-index: -3
+    transform: skewY(-12deg)
+    transform-origin: top
 
-.content .main .psuedo-bg::before 
-  content: ""
-  background-color: #ffffff
-  position: absolute
-  top: 300px
-  right: 0
-  left: 0
-  bottom: 0
-  transform: rotate(-12deg) translateZ(0)
-  z-index: -1 
   
 .content h1, .content h2, .content h3, .content h4, .content h5
   position: relative
-.content .title h1, .content .title h2, .content .title h3
+.title h1, .title h2, .title h3
   color: #ffffff
   text-align: center
 .section
@@ -132,13 +138,13 @@ p
   animation: fade-in .5s
 
 .bg-grey
-  margin: 20px 0px
-  padding: 80px 0px
+  margin: 40px 0px
+  padding: 40px 0px
   position: relative
 
 .bg-grey::before
   content: ""
-  margin: 20px -50vw
+  margin: 0px -50vw
   position: absolute
   background-color: #f7f7f7
   top: 0

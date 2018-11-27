@@ -3,13 +3,13 @@ templateKey: project-page
 title: Milestone Website
 date: 2018-10-11T15:04:10.000Z
 description: A complete redesign and development of the corporate website
-thumbnail: '/static/uploads/Laptop-Phone.jpg'
+thumbnail: './uploads/Laptop-Phone.jpg'
 tags:
   - design
   - develop
 ---
 
-![Milestone Website](/uploads/Laptop-Phone.jpg)
+![Milestone Website](/uploads/website-new-laptop-phone.png)
 
 Milestone started as an IT Relocation company and quickly evolved into an IT Managed Services Provider based on consumer needs. We continuously redesigned and refreshed the website to align to our growing service offerings.
 
@@ -53,12 +53,12 @@ The current website had an immense amount of areas of improvement. Not only did 
 <div class="columns">
   <div class="column is-6">
 
-  ![Old Website Homepage](/uploads/Homepage-old.jpg)
+  ![Old Website Homepage](/uploads/website-old-homepage.jpg)
 
   </div>
   <div class="column is-6">
 
-  ![Old Website Content Page](/uploads/Services-old.jpg)
+  ![Old Website Content Page](/uploads/website-old-services-page.jpg)
 
   </div>
 </div>
@@ -73,35 +73,33 @@ We started with the business requirements–which, at a high-level, were to repr
 
   <h5 style="text-align:center">Homepage</h5>
 
-![Milestone Homepage Wireframe](/uploads/Homepage.jpg)
+![Milestone Homepage Wireframe](/uploads/website-wireframe-homepage.jpg)
 
 </div>
 <div class="column is-4">
 
   <h5 style="text-align:center">Content Page</h5>
 
-![Milestone Content Wireframe](/uploads/Services-Page.jpg)
+![Milestone Content Wireframe](/uploads/website-wireframe-services-page.jpg)
 </div>
 <div class="column is-4">
 
   <h5 style="text-align:center">Blog</h5>
 
-![Milestone Blog Wireframe](/uploads/Blog.jpg)
+![Milestone Blog Wireframe](/uploads/website-wireframe-blog.jpg)
 
   <h5 style="text-align:center">Micro Site</h5>
 
-![Milestone Micro Site Wireframe](/uploads/Landing-Page.jpg)
+![Milestone Micro Site Wireframe](/uploads/website-wireframe-landing-page.jpg)
 </div>
 </div>
 
 #### Improving the Customer Journey
 Going into this project, we knew we needed to implement nurture campaigns and lead generation programs. A huge part of the redesign revolved around how we can reach our customers through Thought Leadership blogs and creating informational collateral. Before this, Milestone did not have an efficient way of tracking marketing leads or a way of nurturing contacts.
-<div class="columns">
-<div class="column is-8">
 
-![Workflow](/uploads/Workflow.jpg)
-</div>
-</div>
+
+![Workflow](/uploads/website-new-workflow.jpg)
+
 </div>
 
 ## The Development
@@ -147,30 +145,31 @@ We started with the business requirements–which, at a high-level, were to repr
 
   <h5 style="text-align:center">Homepage</h5>
 
-  ![Milestone Homepage](/uploads/Homepage-Browser.jpg)
+  ![Milestone Homepage](/uploads/website-new-homepage.jpg)
 
   </div>
   <div class="column is-4">
 
   <h5 style="text-align:center">Content Page</h5>
 
-  ![Milestone Content](/uploads/Services-Browser.jpg)
+  ![Milestone Content](/uploads/website-new-services-page.jpg)
   </div>
   <div class="column is-4">
 
   <h5 style="text-align:center">Blog</h5>
 
-  ![Milestone Blog](/uploads/Blog-Browser.jpg)
+  ![Milestone Blog](/uploads/website-new-blog.jpg)
 
   <h5 style="text-align:center">Micro Site</h5>
 
-  ![Milestone Micro Site](/uploads/Micro-Site-Browser.jpg)
+  ![Milestone Micro Site](/uploads/website-new-micro-site.jpg)
   </div>
 </div>
+<hr/>
 <div class="columns">
   <div class="column is-6">
 
-  ![Environment](/uploads/Environment.jpg)
+  ![Environment](/uploads/website-new-environment.jpg)
   </div>
   <div class="column is-6">
 
@@ -192,11 +191,11 @@ Overall, we drastically increased SEO and generated hundreds of contacts resulti
 <div class="columns">
   <div class="column is-6">
 
-  ![Analytics](/uploads/Analytics.jpg)
+  ![Analytics](/uploads/website-new-analytics.jpg)
   </div>
   <div class="column is-6">
 
-  ![SEO](/uploads/SEO.jpg)
+  ![SEO](/uploads/website-new-seo.jpg)
   </div>
 </div>
 </div>

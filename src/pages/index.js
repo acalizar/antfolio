@@ -14,7 +14,7 @@ export default class IndexPage extends React.Component {
         & .content .title{
           text-align:center;
         }
-        .column > .content {
+        .column > .content.tile {
           border: none;
           text-align: center;
           position: relative;
@@ -24,7 +24,6 @@ export default class IndexPage extends React.Component {
           flex-direction: column;
           justify-content: center;
           box-shadow: 0px 0px 50px -25px #000000;
-          border-radius: 10px;
           border: 1px solid #ededed;
         }
         .thumbnail{
@@ -48,25 +47,22 @@ export default class IndexPage extends React.Component {
         }
     `
     return (
-      <Layout>
-        <Wrapper>
+      <Wrapper>
+        <Layout>
           <div className="fade-in-element">
-            <div className="content">
-              <HeaderOverlay title={"Anthony Calizar"} subtitle={"Design & Development Professional"} />
-            </div>
-            <section className="section">
-              <div className="container">
-                <div className="content">
-                  <div className="main">
-                    <div className="psuedo-bg"></div>
+            <HeaderOverlay title={"Anthony Calizar"} subtitle={"Design & Development Professional"} />
+            <div className="main">
+              <section className="section">
+                <div className="container">
+                  <div className="content">
                     <div className="columns is-multiline">
                       {posts
                         .map(({ node: post }, index) => (
-                          <div className="column is-4" key={index}>
-                            <div className="content" style={{ padding: '2em 3em' }} key={post.id}>
-                            <div className="thumbnail" style={{ 'backgroundImage' : 'url(' + post.frontmatter.thumbnail + ')'  }}></div>
+                          <div className="column is-6" key={index}>
+                            <div className="content tile" style={{ padding: '2em 3em' }} key={post.id}>
+                              <div className="thumbnail" style={{ 'backgroundImage': 'url(' + post.frontmatter.thumbnail + ')' }}></div>
                               <h2>
-                                <Link to={post.fields.slug}>
+                                <Link to={post.fields.slug} style={{ "fontSize": "24px" }}>
                                   {post.frontmatter.title}
                                 </Link>
                               </h2>
@@ -74,7 +70,7 @@ export default class IndexPage extends React.Component {
                                 {post.frontmatter.description}
                               </p>
                               <p>
-                                <Link className="button" to={post.fields.slug}>View →</Link>
+                                <Link className="button is-link" to={post.fields.slug}>View →</Link>
                               </p>
                             </div>
                           </div>
@@ -83,11 +79,25 @@ export default class IndexPage extends React.Component {
                     </div>
                   </div>
                 </div>
-              </div>
-            </section>
+              </section>
+              <br />
+              <section>
+                <div class="container">
+                  <div class="columns">
+                    <div class="column is-10 is-offset-1">
+                      <div class="content"  style={{"textAlign":"center"}}>
+                        <h2>About Me</h2>
+                        <p>I am a well-rounded creative with a demonstrated history of delivering impactful results in a fast-paced environment. Starting as a passionate designer over 7 years ago, I have since expanded my skill set to include UI development, immersing myself in several web-based application / CMS projects. Currently, I lead and execute marketing initiatives as the Creative Services Manager including UX design, UI development, sales support, branding, and much more.</p>
+                        <p><strong><a href="https://linkedin.com/in/acalizar">LinkedIn</a></strong></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
           </div>
-        </Wrapper>
-      </Layout>
+        </Layout>
+      </Wrapper>
     )
   }
 }

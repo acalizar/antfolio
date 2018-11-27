@@ -67,14 +67,11 @@ export default class Index extends React.Component {
       <Wapper>
         <Layout>
           <div className="fade-in-element">
-            <div className="content">
-              <HeaderOverlay title={"Let's Chat"}  />
-            </div>
-            <section  className="section">
-              <div className="container">
-                <div className="content">
-                  <div className="main">
-                    <div className="psuedo-bg"></div>
+              <HeaderOverlay title={"Let's Chat"} />
+            <div className="main">
+              <section className="section">
+                <div className="container">
+                  <div className="content">
                     <form
                       name="contact"
                       method="post"
@@ -115,8 +112,8 @@ export default class Index extends React.Component {
                     </form>
                   </div>
                 </div>
-              </div>
-            </section>
+              </section>
+            </div>
           </div>
         </Layout>
       </Wapper>

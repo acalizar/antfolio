@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import logo from '../uploads/icon.png'
-import styled from "styled-components"
+import styled from 'styled-components'
 
 const Nav = styled.div`
   & {
@@ -26,10 +26,10 @@ const Nav = styled.div`
     transition: .3s ease-in-out all;
   }
   .navbar-item img {
-    max-width: 30px;
-    max-height: 30px;
-    width: 30px;
-    height: 30px;
+    max-width: 40px;
+    max-height: 40px;
+    width: 40px;
+    height: 40px;
     border: 2px solid rgba(255,255,255,.25);
     border-radius: 100px;
     transition: .3s ease-in-out all;
@@ -61,7 +61,6 @@ const Navbar = () => (
           <Link className="navbar-item" to="/contact">
             Contact
         </Link>
-          <a className="navbar-item" href="https://linkedin.com/in/acalizar" rel="noopener noreferrer" target="_blank">LinkedIn</a>
         </div>
       </div>
     </nav>

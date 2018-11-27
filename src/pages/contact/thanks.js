@@ -15,16 +15,20 @@ const Wrapper = styled.div`
 export default () => (
   <Wrapper>
     <Layout>
+      <div className="fade-in-element">
+        <HeaderOverlay title="Thank You!" />
+        <div className="main">
           <section className="section">
             <div className="container">
               <div className="content">
-                <HeaderOverlay title="Thank You!" />  
               </div>
               <div className="content">
-                  <p>I will reach out to you as soon as possible</p>
+                <p>I will reach out to you as soon as possible</p>
               </div>
             </div>
-            </section>
+          </section>
+        </div>
+      </div>
     </Layout>
   </Wrapper>
 );

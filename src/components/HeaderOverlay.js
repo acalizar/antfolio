@@ -9,80 +9,82 @@ const randomBlock = () => {
     return styles;
 }
 const Overlay = styled.div`
-    .full-width-container{
+    .header-bg{
+
+    }
+    .block-bg{
         position: fixed;
-        top: 0;
+        transform: translateZ(0px);
+        top: 0;    
         left: 0;
-        right: 0;
-        margin: 0 -50vw;
-        transform-origin: 0;
-        transform: skewY(-12deg) translateZ(-5px);
-        overflow: hidden;
-        min-width: 800px;
-        min-height: 800px;
-        height: 100vh;
+        right: 0;  
         z-index: -10;
-        overflow-x: hidden;
-        overflow-y: hidden;
+        bottom: -130px;
     }
     .block-container {
-        position: absolute;
-        top: 0; bottom: 0; left: 0; right: 0;
-        background-color: #244250;
+        transform: skewY(-12deg);
+        transform-origin: 0;    
+        overflow: hidden;
+        height: 80%;
+        min-height: 800px;
     }
-    .block-row, .block-row, .block-row{
+    .block-row{
         display: flex;
     }
     .block-item{
         background: #224f8a;
-        height: 175px;
+        height: 180px;
         box-shadow: 0px 0px 100px -10px rgba(0,0,0,.5);
         opacity: 1;
-        min-width: 12%;
-        transform:translateZ(1px);
-        transition: ease-in-out all 3s;
+        min-width: 25%;
+        transform: scale(2);
     }
+        
 `
-const HeaderOverlay = ({title, subtitle}) => (
+const HeaderOverlay = ({ title, subtitle }) => (
     <Overlay>
-            <div className="full-width-container">
-                <div className="block-container">
-                    <div className="block-row">
-                        <div className="block-item" style={randomBlock()}></div>
-                        <div className="block-item" style={randomBlock()}></div>
-                    </div>
-                    <div className="block-row">
-                        <div className="block-item" style={randomBlock()}></div>
-                        <div className="block-item" style={randomBlock()}></div>
-                    </div>
-                    <div className="block-row">
-                        <div className="block-item" style={randomBlock()}></div>
-                        <div className="block-item" style={randomBlock()}></div>
-                    </div>
-                    <div className="block-row">
-                        <div className="block-item" style={randomBlock()}></div>
-                        <div className="block-item" style={randomBlock()}></div>
-                        <div className="block-item" style={randomBlock()}></div>
-                    </div>
-                    <div className="block-row">
-                        <div className="block-item" style={randomBlock()}></div>
-                        <div className="block-item" style={randomBlock()}></div>
-                    </div>
-                    <div className="block-row">
-                        <div className="block-item" style={randomBlock()}></div>
-                        <div className="block-item" style={randomBlock()}></div>
-                    </div>
-                    <div className="block-row">
-                        <div className="block-item" style={randomBlock()}></div>
-                        <div className="block-item" style={randomBlock()}></div>
-                        <div className="block-item" style={randomBlock()}></div>
+        <div className="content">
+            <div className="header-bg">
+                <div className="block-bg">
+                    <div className="block-container">
+                        <div className="block-row">
+                            <div className="block-item" style={randomBlock()}></div>
+                            <div className="block-item" style={randomBlock()}></div>
+                        </div>
+                        <div className="block-row">
+                            <div className="block-item" style={randomBlock()}></div>
+                            <div className="block-item" style={randomBlock()}></div>
+                        </div>
+                        <div className="block-row">
+                            <div className="block-item" style={randomBlock()}></div>
+                            <div className="block-item" style={randomBlock()}></div>
+                        </div>
+                        <div className="block-row">
+                            <div className="block-item" style={randomBlock()}></div>
+                            <div className="block-item" style={randomBlock()}></div>
+                            <div className="block-item" style={randomBlock()}></div>
+                        </div>
+                        <div className="block-row">
+                            <div className="block-item" style={randomBlock()}></div>
+                            <div className="block-item" style={randomBlock()}></div>
+                        </div>
+                        <div className="block-row">
+                            <div className="block-item" style={randomBlock()}></div>
+                            <div className="block-item" style={randomBlock()}></div>
+                        </div>
+                        <div className="block-row">
+                            <div className="block-item" style={randomBlock()}></div>
+                            <div className="block-item" style={randomBlock()}></div>
+                            <div className="block-item" style={randomBlock()}></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        <div className="container">
-            <div className="title">
-                <h1 className="has-text-weight-bold is-size-2">{title}</h1>
-                <h3>{subtitle}</h3>
+            <div className="container">
+                <div className="title">
+                    <h1 className="has-text-weight-bold is-size-2">{title}</h1>
+                    <h3>{subtitle}</h3>
+                </div>
             </div>
         </div>
     </Overlay>

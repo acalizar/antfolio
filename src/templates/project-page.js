@@ -10,8 +10,9 @@ import styled from 'styled-components'
 
 const Post = styled.div`
   .main > section > .content{
-        padding: 40px;
+        padding: 0px 40px 40px;
   }
+  /*
   .main > section > .content::before {
       content: '';
       position: absolute;
@@ -21,6 +22,17 @@ const Post = styled.div`
       min-height: 1000px;
       background: linear-gradient(to bottom,#f7f7f7 60%,rgba(255,255,255,0) );
       z-index: -1;
+  }*/
+  img {
+    box-shadow: none !important;
+    max-width:650px;
+    height: auto !important;
+    position: unset !important;
+  }
+  .gatsby-resp-image-background-image{
+    background-image: none !important;
+    padding-bottom: 0 !important;
+    text-align: center;
   }
 `
 
@@ -35,12 +47,8 @@ export const ProjectPageTemplate = ({
   const PostContent = contentComponent || Content
   return (
     <div className="fade-in-element">
-      <div className="content">
         <HeaderOverlay title={title} subtitle={description} />
-      </div>
-      <div className="content">
         <div className="main">
-          <div className="psuedo-bg"></div>
           <section className="section">
             {helmet || ''}
             <div className="container content fade-in-element">
@@ -63,7 +71,6 @@ export const ProjectPageTemplate = ({
               </div>
             </div>
           </section>
-        </div>
       </div>
     </div>
   )

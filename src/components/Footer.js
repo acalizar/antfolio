@@ -8,11 +8,11 @@ const Footer = styled.div`
   & {
     margin-top: 50px;
     padding: 20px 15px 50px; 
-      background-color: transparent;
+    background-color: #ffffff;
   }
   @media screen and (min-width: 769px){
      & {
-    background-color: #ffffff;
+      background-color: transparent;
     }
   }
   .footer-item{

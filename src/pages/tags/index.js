@@ -3,35 +3,56 @@ import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/Layout'
+import HeaderOverlay from '../../components/HeaderOverlay'
+import styled from "styled-components"
 
+const Wrapper = styled.div`
+  .main > section > .content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    min-height: 750px;
+    background: linear-gradient(to bottom,#f7f7f7 60%,rgba(255,255,255,0) );
+    z-index: -1;
+  }
+`
 const TagsPage = ({
   data: { allMarkdownRemark: { group }, site: { siteMetadata: { title } } },
 }) => (
-  <Layout>
-    <section className="section">
-      <Helmet title={`Tags | ${title}`} />
-      <div className="container content">
-        <div className="columns">
-          <div
-            className="column is-10 is-offset-1"
-            style={{ marginBottom: '6rem' }}
-          >
-            <h1 className="title is-size-2 is-bold-light">Tags</h1>
-            <ul className="taglist">
-              {group.map(tag => (
-                <li key={tag.fieldValue}>
-                  <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                    {tag.fieldValue} ({tag.totalCount})
-                  </Link>
-                </li>
-              ))}
-            </ul>
+    <Wrapper>
+      <Layout>
+        <div className="fade-in-elemnt">
+          <HeaderOverlay title={"Tags"} />
+          <div className="main">
+            <section className="section">
+              <Helmet title={`Tags | ${title}`} />
+              <div className="container content">
+                <div className="columns">
+                  <div
+                    className="column is-10 is-offset-1"
+                    style={{ marginTop: '50px' }}
+                  >
+                    <h1 className="is-size-2 is-bold-light">Tags</h1>
+                    <ul className="taglist">
+                      {group.map(tag => (
+                        <li key={tag.fieldValue}>
+                          <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                            {tag.fieldValue} ({tag.totalCount})
+                    </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
-      </div>
-    </section>
-  </Layout>
-)
+      </Layout>
+    </Wrapper>
+  )
 
 export default TagsPage
 

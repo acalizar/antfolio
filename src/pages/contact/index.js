@@ -32,7 +32,8 @@ function encode(data) {
 export default class Index extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isValidated: false };
+    this.state = { isValidated: false, currentScrollHeight: 0 };
+
   }
 
   handleChange = e => {
@@ -57,17 +58,18 @@ export default class Index extends React.Component {
   componentDidMount () {      
     window.onscroll =()=>{
      const newScrollHeight = Math.ceil(window.scrollY / 50) *50;
-     if (this.state.currentScrollHeight != newScrollHeight){
+     if (this.state.currentScrollHeight !== newScrollHeight){
          this.setState({currentScrollHeight: newScrollHeight})
      }
    }
- }*/ //const opacity = Math.min(100 / this.state.currentScrollHeight  , 1)
+  } 
+  const opacity = Math.min(100 / this.state.currentScrollHeight  , 1);*/
   render() {
     return (
       <Wapper>
         <Layout>
           <div className="fade-in-element">
-              <HeaderOverlay title={"Let's Chat"} />
+            <HeaderOverlay title={"Let's Chat"} />
             <div className="main">
               <section className="section">
                 <div className="container">

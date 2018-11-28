@@ -12,17 +12,6 @@ const Post = styled.div`
   .main > section > .content{
         padding: 0px 40px 40px;
   }
-  /*
-  .main > section > .content::before {
-      content: '';
-      position: absolute;
-      top: 0; 
-      right: 0;
-      left: 0;
-      min-height: 1000px;
-      background: linear-gradient(to bottom,#f7f7f7 60%,rgba(255,255,255,0) );
-      z-index: -1;
-  }*/
   img {
     box-shadow: none !important;
     max-width:650px;

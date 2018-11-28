@@ -11,40 +11,58 @@ export default class IndexPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     const Wrapper = styled.div`
-        & .content .title{
-          text-align:center;
+
+        .column {
+            position: relative;
+          .content.tile {
+            border: none;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 350px;
+            display: flex;
+            flex-direction: column;
+            /*justify-content: center;*/
+            box-shadow: 0px 0px 50px -25px #000000;
+            border: 1px solid #ededed;
+            padding: 10px 20px 20px;
+            :hover img{
+              transform: scale(1.1);
+            }
+          }
+          .content.tile.about{
+            background: linear-gradient(to bottom, #ededed, #ffffff);
+            box-shadow: none;
+            border: none;
+            padding: 40px 20px;
+            margin: 0 auto;
+          }
+          .content.tile h2{
+          margin: -10px -20px 20px;
+          padding: 20px 10px;
+          background-color: #2d70df;
+            a {
+              width: 100%;
+              display: block;
+              color: #ffffff;
+            }
+          }        
+          .thumbnail{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 300px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            img{
+              object-fit: cover;
+              height: 300px;
+              transition: ease-in-out all .3s;
+            }
+          }
         }
-        .column > .content.tile {
-          border: none;
-          text-align: center;
-          position: relative;
-          overflow: hidden;
-          min-height: 350px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          box-shadow: 0px 0px 50px -25px #000000;
-          border: 1px solid #ededed;
-        }
-        .thumbnail{
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          z-index: -1;
-          background-size: cover;
-          transform: scale(1.2)
-        }
-        .thumbnail::after{
-          content: "";
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          background: rgba(255,255,255,.90);
-        }
+
+
     `
     return (
       <Wrapper>
@@ -56,19 +74,24 @@ export default class IndexPage extends React.Component {
                 <div className="container">
                   <div className="content">
                     <div className="columns is-multiline">
+                      <div className="column is-three-fifths is-offset-one-fifth">
+                        <div className="content tile about" style={{ "textAlign": "center" }}>
+                          <p>Hello! I am a designer and developer based in the Bay Area, CA area. Starting out as a passionate web and graphic designer, I have grown to love multiple disciplines – specifically around UX design and UI development. At the end of the day, I simply just like to create. I have a strong background in marketing design, web development, and user experience.</p>
+                          <p><strong><a href="https://linkedin.com/in/acalizar">LinkedIn</a></strong></p>
+                        </div>
+                      </div>
                       {posts
                         .map(({ node: post }, index) => (
-                          <div className="column is-6" key={index}>
-                            <div className="content tile" style={{ padding: '2em 3em' }} key={post.id}>
-                              <div className="thumbnail" style={{ 'backgroundImage': 'url(' + post.frontmatter.thumbnail + ')' }}></div>
+                          <div className="column is-4" key={index}>
+                            <div className="content tile" key={post.id}>
                               <h2>
                                 <Link to={post.fields.slug} style={{ "fontSize": "24px" }}>
                                   {post.frontmatter.title}
                                 </Link>
                               </h2>
-                              <p>
-                                {post.frontmatter.description}
-                              </p>
+                              <Link to={post.fields.slug}>
+                                <div className="thumbnail"><img src={post.frontmatter.thumbnail} alt={post.frontmatter.title} /></div>
+                              </Link>
                               <p>
                                 <Link className="button is-link" to={post.fields.slug}>View →</Link>
                               </p>
@@ -76,20 +99,6 @@ export default class IndexPage extends React.Component {
                           </div>
                         ))
                       }
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <br />
-              <section>
-                <div class="container">
-                  <div class="columns">
-                    <div class="column is-10 is-offset-1">
-                      <div class="content"  style={{"textAlign":"center"}}>
-                        <h2>About Me</h2>
-                        <p>I am a well-rounded creative with a demonstrated history of delivering impactful results in a fast-paced environment. Starting as a passionate designer over 7 years ago, I have since expanded my skill set to include UI development, immersing myself in several web-based application / CMS projects. Currently, I lead and execute marketing initiatives as the Creative Services Manager including UX design, UI development, sales support, branding, and much more.</p>
-                        <p><strong><a href="https://linkedin.com/in/acalizar">LinkedIn</a></strong></p>
-                      </div>
                     </div>
                   </div>
                 </div>

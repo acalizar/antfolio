@@ -41,6 +41,8 @@ There were three major components that I was considering going into this project
 <div class="bg-grey">
 
 <h2 style="text-align:center">Rendering and Printing</h2>
+
+
 It was exciting to know that I could explore an idea and have a functional prototype in my hands in a matter of weeks. I created 5 renders and printed a total of 4 prototypes using a hard plastic.
 <br/><br/>
 

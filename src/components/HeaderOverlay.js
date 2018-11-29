@@ -58,7 +58,6 @@ export default class HeaderOverlay extends React.Component {
         return styles; 
     }
     render() {  
-        console.log(this.state.blockItems)
         return (
             <Overlay>
                 <div className="content">

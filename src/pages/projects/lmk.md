@@ -8,9 +8,13 @@ tags:
   - design
   - develop
 ---
-<p style='text-align: center'>
-<img src='https://acalizar.com/wp-content/uploads/2018/09/LMK-overview-1.gif' alt='LMK Overview' style='max-width: 650px; width: 100%; margin: 0 auto; border: 3px solid #dddddd;' />
-</p>
+
+<div style='text-align:center'>
+
+
+<a href='/files/lmk-overview.gif' target="_blank"><img src='/files/lmk-overview.gif' alt='LMK Overview' style='max-width: 650px; width: 100%; margin: 0 auto; border: 3px solid #dddddd;' /></a><br/><br/>
+</div>
+
 
  I started this project out of personal necessity. I got to a point where I either had several tabs open for each web-based chat application or I had created a bunch of chrome desktop apps and they were all open in my task bar. I really just needed a consolidated application that housed all of these web-based applications (Facebook Messenger, WhatsApp, Teams, Zoom, Android for Web, etc) that were outside of my main browser. With this application, I can now have my main browser open, and all of my chat and music applications in a separate, dedicated window.
 
@@ -55,9 +59,11 @@ Since this was just a proof of concept, I was heavily focused on functionality. 
 
 <div class="columns">
   <div class="column is-4">
-    <p style='text-align: center'>
-      <img src='https://acalizar.com/wp-content/uploads/2018/09/LMK-add.gif' alt='LMK Add' style='width: 100%; margin: 0 auto; border: 3px solid #ededed' />
-     </p>
+<div style='text-align:center'>
+
+
+<a href='/files/lmk-add.gif' target="_blank"><img src='/files/lmk-add.gif' alt='LMK Add' style='width: 100%; margin: 0 auto; border: 3px solid #ededed' /></a>
+     </div>
   </div>
   <div class="column is-8">
   <h5>URL Validation and Favicons</h5>
@@ -70,16 +76,20 @@ Since this was just a proof of concept, I was heavily focused on functionality. 
 </div>
 
 <div class="columns">
-  <div class="column is-4">
-    <p style='text-align: center'>
-      <img src='https://acalizar.com/wp-content/uploads/2018/09/LMK-notification.gif' alt='LMK Notification' style='width: 40%; margin: 0 auto; border: 3px solid #ededed' />
-      <img src='https://acalizar.com/wp-content/uploads/2018/09/LMK-music.gif' alt='LMK Music' style='width: 40%; margin: 0 auto; border: 3px solid #ededed' />
-    </p>
-  </div>
+<div class="column is-4">
+<div style='text-align:center'>
+
+
+<a href='/files/lmk-notification.gif' target="_blank"><img src='/files/lmk-notification.gif' alt='LMK Notification' style='width: 40%; margin: 0 auto; border: 3px solid #ededed' /></a>
+<a href='/files/lmk-music.gif' target="_blank"><img src='/files/lmk-music.gif' alt='LMK Music' style='width: 40%; margin: 0 auto; border: 3px solid #ededed' /></a>
+
+
+</div>
+</div>
 <div class="column is-8">
-  <h5>Notifications and Music Playing</h5>
+<h5>Notifications and Music Playing</h5>
 There are a few ways to trigger notifications, so this took me a while to figure out what worked for me. Since I was also adding my music apps into this, I wanted a way to show that music was playing on a particular tab at any given time, similar to how most browsers show a volume icon.
-  </div>
+</div>
 </div>
 
 <div class="bg-grey">

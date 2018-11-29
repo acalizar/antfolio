@@ -15,7 +15,9 @@ const Wrapper = styled.div`
     left: 0;
     min-height: 750px;
     background: linear-gradient(to bottom,#f7f7f7 60%,rgba(255,255,255,0) );
-    z-index: -1;
+  }
+  a{
+    position: relative;
   }
 `
 const TagsPage = ({

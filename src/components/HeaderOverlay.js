@@ -8,13 +8,13 @@ const Overlay = styled.div`
     }
     .block-bg{
         position: fixed;
-        top: 0;    
+        top: -160px;    
         left: 0;
         right: 0;  
         z-index: -10;
-        bottom: -130px;
     }
     .block-container {
+        background-color: #333333;
         transform: skewY(-12deg);
         transform-origin: 0;    
         overflow: hidden;
@@ -24,12 +24,12 @@ const Overlay = styled.div`
     }
     .block-row{
         display: flex;
+        width: 130%;
     }
     .block-item{
-        height: 200px;
+        height: 180px;
         box-shadow: 0px 0px 100px -10px rgba(0,0,0,.5);
         opacity: 1;
-        min-width: 25%;
         transform: translateZ(-2px) scale(1.01);
     }
         
@@ -43,7 +43,7 @@ export default class HeaderOverlay extends React.Component {
     componentDidMount() {
         const blockItemGenerator = () => {
             let items = [];
-            for (let i = 0; i < 16; i++) {
+            for (let i = 0; i < 9; i++) {
                 items.push(this.randomBlock());
             }
             return items;
@@ -53,7 +53,7 @@ export default class HeaderOverlay extends React.Component {
     randomBlock = () => {
         let rgb = [Math.round(Math.floor(Math.random() * 50) + 10), Math.round(Math.floor(Math.random() * 70) + 30), Math.round(Math.floor(Math.random() * 120) + 30)];
         let color = "linear-gradient(to right, rgb(" + rgb.toString() + "), rgb(" + Math.round((rgb[0] * .75)) + "," + Math.round((rgb[1] * .75)) + ","+ Math.round((rgb[2] * .75)) + "))";
-        let size = 'calc(25% + ' + (Math.floor(Math.random() * 2500) + 200) + 'px)';
+        let size = 'calc(20% + ' + Math.round((Math.floor(Math.random() * 2500))) + 'px)';
         let styles = { 'background': color, width: size };
         return styles; 
     }
@@ -72,27 +72,32 @@ export default class HeaderOverlay extends React.Component {
                                 <div className="block-row">
                                     <div className="block-item" style={this.state.blockItems[3]}></div>
                                     <div className="block-item" style={this.state.blockItems[4]}></div>
+                                    <div className="block-item" style={this.state.blockItems[5]}></div>
+                                <div className="block-row">
+                                    <div className="block-item" style={this.state.blockItems[6]}></div>
+                                    <div className="block-item" style={this.state.blockItems[7]}></div>
+                                    <div className="block-item" style={this.state.blockItems[8]}></div>
+                                </div>
+                                </div>
+                                <div className="block-row">
+                                    <div className="block-item" style={this.state.blockItems[2]}></div>
+                                    <div className="block-item" style={this.state.blockItems[0]}></div>
+                                    <div className="block-item" style={this.state.blockItems[1]}></div>
                                 </div>
                                 <div className="block-row">
                                     <div className="block-item" style={this.state.blockItems[5]}></div>
-                                    <div className="block-item" style={this.state.blockItems[6]}></div>
+                                    <div className="block-item" style={this.state.blockItems[3]}></div>
+                                    <div className="block-item" style={this.state.blockItems[4]}></div>
                                 </div>
                                 <div className="block-row">
-                                    <div className="block-item" style={this.state.blockItems[7]}></div>
                                     <div className="block-item" style={this.state.blockItems[8]}></div>
-                                    <div className="block-item" style={this.state.blockItems[9]}></div>
+                                    <div className="block-item" style={this.state.blockItems[6]}></div>
+                                    <div className="block-item" style={this.state.blockItems[7]}></div>
                                 </div>
                                 <div className="block-row">
-                                    <div className="block-item" style={this.state.blockItems[10]}></div>
-                                    <div className="block-item" style={this.state.blockItems[11]}></div>
-                                </div>
-                                <div className="block-row">
-                                    <div className="block-item" style={this.state.blockItems[12]}></div>
-                                    <div className="block-item" style={this.state.blockItems[13]}></div>
-                                </div>
-                                <div className="block-row">
-                                    <div className="block-item" style={this.state.blockItems[14]}></div>
-                                    <div className="block-item" style={this.state.blockItems[15]}></div>
+                                    <div className="block-item" style={this.state.blockItems[1]}></div>
+                                    <div className="block-item" style={this.state.blockItems[2]}></div>
+                                    <div className="block-item" style={this.state.blockItems[0]}></div>
                                 </div>
                             </div>
                         </div>

@@ -44,18 +44,11 @@ export const ProjectPageTemplate = ({
               <div className="columns">
                 <div className="column is-12">
                   <PostContent content={content} />
-                  {tags && tags.length ? (
-                    <div style={{ marginTop: `4rem` }}>
-                      <h4>Tags</h4>
-                      <ul className="taglist">
-                        {tags.map(tag => (
-                          <li key={tag + `tag`}>
-                            <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ) : null}
+                  <Link to={`/`}><p style={{textAlign: "center"}}>Back</p></Link>
+
+
+
+
                 </div>
               </div>
             </div>
@@ -64,6 +57,22 @@ export const ProjectPageTemplate = ({
     </div>
   )
 }
+
+/* 
+//Add this right after Postcontent
+{tags && tags.length ? (
+  <div style={{ marginTop: `4rem` }}>
+    <h4>Tags</h4>
+    <ul className="taglist">
+      {tags.map(tag => (
+        <li key={tag + `tag`}>
+          <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+        </li>
+      ))}
+    </ul>
+  </div>
+) : null}
+*/
 
 ProjectPageTemplate.propTypes = {
   content: PropTypes.node.isRequired,
@@ -89,7 +98,7 @@ const ProjectPage = ({ data }) => {
               <meta name="description" content={`${post.frontmatter.description}`} />
             </Helmet>
           }
-          tags={post.frontmatter.tags}
+         // tags={post.frontmatter.tags}
           title={post.frontmatter.title}
         />
       </Layout>

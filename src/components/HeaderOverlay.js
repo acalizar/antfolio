@@ -58,7 +58,6 @@ export default class HeaderOverlay extends React.Component {
         return styles; 
     }
     render() {  
-        console.log(this.state.blockItems)
         return (
             <Overlay>
                 <div className="content">
@@ -109,14 +108,3 @@ export default class HeaderOverlay extends React.Component {
         )
     }
 }
-
-/*
-
-                                {  this.state.blockItems.map((blockItem, index) => {
-                                    console.log(blockItem)
-                                       return <div className="block-row">
-                                           <div className="block-item" style={blockItem}></div>
-                                        </div>
-                                })  }
-
-                                */

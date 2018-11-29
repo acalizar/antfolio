@@ -32,7 +32,7 @@ const FooterDiv = () => (
         <div className="footer-start">
           <div className="sitemap">
             <Link className="footer-item" to="/">
-              Work
+              Main
           </Link>
             <Link className="footer-item" to="/contact">
               Contact

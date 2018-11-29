@@ -4,8 +4,10 @@ import HeaderOverlay from '../../components/HeaderOverlay'
 import styled from "styled-components"
 
 const Wrapper = styled.div`
-  &{
+  .main section  {
 
+    min-height: 500px;
+   
   }
   p{
     text-align: center;
@@ -16,14 +18,11 @@ export default () => (
   <Wrapper>
     <Layout>
       <div className="fade-in-element">
-        <HeaderOverlay title="Thank You!" />
+        <HeaderOverlay title="Thank You!" subtitle="I will reach out to you as soon as possible" />
         <div className="main">
           <section className="section">
             <div className="container">
               <div className="content">
-              </div>
-              <div className="content">
-                <p>I will reach out to you as soon as possible</p>
               </div>
             </div>
           </section>

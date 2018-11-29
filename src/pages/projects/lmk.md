@@ -1,6 +1,6 @@
 ---
 templateKey: project-page
-title: LMK (an Electron.js Application)
+title: LMK (Electron.js App)
 date: 2018-11-11T15:04:10.000Z
 description: Combine your web-based applications into a single native app
 thumbnail: './uploads/lmk-featured.jpg'

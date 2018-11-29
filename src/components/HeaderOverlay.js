@@ -8,7 +8,6 @@ const Overlay = styled.div`
     }
     .block-bg{
         position: fixed;
-        transform: translateZ(0px);
         top: 0;    
         left: 0;
         right: 0;  
@@ -27,22 +26,20 @@ const Overlay = styled.div`
         display: flex;
     }
     .block-item{
-        background: #224f8a;
-        height: 180px;
+        height: 200px;
         box-shadow: 0px 0px 100px -10px rgba(0,0,0,.5);
         opacity: 1;
         min-width: 25%;
-        transform: scale(2);
+        transform: translateZ(-2px) scale(1.01);
     }
         
 `
 export default class HeaderOverlay extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            blockItems: [{  background: '#ededed', width: '33.33%' }]
-        }
+
+    state = {
+        blockItems: [{  background: '#224f8a', width: '33.33%' }]
     }
+    
     componentDidMount() {
         const blockItemGenerator = () => {
             let items = [];
@@ -54,21 +51,21 @@ export default class HeaderOverlay extends React.Component {
         this.setState({ blockItems: blockItemGenerator() });
     }
     randomBlock = () => {
-        let rgb = [Math.floor(Math.random() * 50) + 10, Math.floor(Math.random() * 70) + 30, Math.floor(Math.random() * 120) + 30];
-        let color = "linear-gradient(to right, rgb(" + rgb.toString() + "), rgb(" + (rgb[0] * .75) + "," + (rgb[1] * .75) + ","+ (rgb[2] * .75) + "))";
-        
+        let rgb = [Math.round(Math.floor(Math.random() * 50) + 10), Math.round(Math.floor(Math.random() * 70) + 30), Math.round(Math.floor(Math.random() * 120) + 30)];
+        let color = "linear-gradient(to right, rgb(" + rgb.toString() + "), rgb(" + Math.round((rgb[0] * .75)) + "," + Math.round((rgb[1] * .75)) + ","+ Math.round((rgb[2] * .75)) + "))";
         let size = 'calc(25% + ' + (Math.floor(Math.random() * 2500) + 200) + 'px)';
-        let styles = { background: color, width: size };
+        let styles = { 'background': color, width: size };
         return styles; 
     }
     render() {  
+        console.log(this.state.blockItems)
         return (
             <Overlay>
                 <div className="content">
                     <div className="header-bg">
                         <div className="block-bg">
                             <div className="block-container">
-                                <div className="block-row">
+                            <div className="block-row">
                                     <div className="block-item" style={this.state.blockItems[0]}></div>
                                     <div className="block-item" style={this.state.blockItems[1]}></div>
                                     <div className="block-item" style={this.state.blockItems[2]}></div>
@@ -112,3 +109,14 @@ export default class HeaderOverlay extends React.Component {
         )
     }
 }
+
+/*
+
+                                {  this.state.blockItems.map((blockItem, index) => {
+                                    console.log(blockItem)
+                                       return <div className="block-row">
+                                           <div className="block-item" style={blockItem}></div>
+                                        </div>
+                                })  }
+
+                                */

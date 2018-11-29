@@ -22,7 +22,6 @@ export default class IndexPage extends React.Component {
             min-height: 350px;
             display: flex;
             flex-direction: column;
-            /*justify-content: center;*/
             box-shadow: 0px 0px 50px -25px #000000;
             border: 1px solid #ededed;
             padding: 10px 20px 20px;
@@ -61,8 +60,6 @@ export default class IndexPage extends React.Component {
             }
           }
         }
-
-
     `
     return (
       <Wrapper>

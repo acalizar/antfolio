@@ -56,7 +56,7 @@ const Navbar = () => (
         </div>
         <div className="navbar-start">
           <Link className="navbar-item" to="/">
-            Ant
+            Main
         </Link>
           <Link className="navbar-item" to="/contact">
             Contact

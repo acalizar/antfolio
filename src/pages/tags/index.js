@@ -7,14 +7,21 @@ import HeaderOverlay from '../../components/HeaderOverlay'
 import styled from "styled-components"
 
 const Wrapper = styled.div`
-  .main > section > .content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    min-height: 750px;
-    background: linear-gradient(to bottom,#f7f7f7 60%,rgba(255,255,255,0) );
+  & {
+      .column{
+        position: relative;
+        height: 650px;
+        padding: 50px;
+      }
+      .column::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom,#f7f7f7 60%,rgba(255,255,255,0) );
+    }
   }
   a{
     position: relative;
@@ -25,31 +32,21 @@ const TagsPage = ({
 }) => (
     <Wrapper>
       <Layout>
-        <div className="fade-in-elemnt">
-          <HeaderOverlay title={"Tags"} />
-          <div className="main">
-            <section className="section">
-              <Helmet title={`Tags | ${title}`} />
-              <div className="container content">
-                <div className="columns">
-                  <div
-                    className="column is-10 is-offset-1"
-                    style={{ marginTop: '50px' }}
-                  >
-                    <h1 className="is-size-2 is-bold-light">Tags</h1>
-                    <ul className="taglist">
-                      {group.map(tag => (
-                        <li key={tag.fieldValue}>
-                          <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                            {tag.fieldValue} ({tag.totalCount})
-                    </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </section>
+        <Helmet title={`Tags | ${title}`} />
+        <div className="title">
+          <h1 className="has-text-weight-bold is-size-2">Tags</h1>
+        </div>
+        <div className="columns">
+          <div className="column is-10 is-offset-1" style={{ marginTop: '50px' }}>
+            <ul className="taglist">
+              {group.map(tag => (
+                <li key={tag.fieldValue}>
+                  <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                    {tag.fieldValue} ({tag.totalCount})
+                          </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </Layout>

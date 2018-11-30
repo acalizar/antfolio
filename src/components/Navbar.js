@@ -33,8 +33,9 @@ const Nav = styled.div`
     border: 2px solid rgba(255,255,255,.25);
     border-radius: 100px;
     transition: .3s ease-in-out all;
+    margin-right: 12px;
   }
-  .navbar-item img:hover{
+  .navbar-item:hover img{
     border: 2px solid #ffffff;
   }
   a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.is-active{
@@ -49,13 +50,13 @@ const Navbar = () => (
       <div className="container">
         <div className="navbar-brand">
           <Link to="/" className="navbar-item">
-            <figure className="image">
-              <img src={logo} alt="Ant" className="logo" />
-            </figure>
           </Link>
         </div>
         <div className="navbar-start">
           <Link className="navbar-item" to="/">
+            <figure className="image">
+              <img src={logo} alt="Ant" className="logo" />
+            </figure>
             Main
         </Link>
           <Link className="navbar-item" to="/contact">

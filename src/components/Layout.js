@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import './all.sass'
 import styled from "styled-components"
+import HeaderOverlay from '../components/HeaderOverlay'
 
 const Wrapper = styled.div`
   &{
@@ -20,7 +21,16 @@ const TemplateWrapper = ({ children }) => (
       { rel: 'shortcut icon', type: 'image/ico', href: `${favicon}` }
     ]} title="Anthony Calizar" />
     <Navbar />
-    <div>{children}</div>
+    <HeaderOverlay />
+      <div className="main">
+        <section className="section">
+          <div className="container">
+            <div className="content fade-in-element">
+              {children}
+            </div>
+          </div>
+        </section>
+      </div>
     <Footer />
   </Wrapper>
 )

@@ -24,6 +24,8 @@ const Post = styled.div`
     text-align: center;
   }
 `
+const Wrapper = styled.div`
+`
 
 export const ProjectPageTemplate = ({
   content,
@@ -35,26 +37,24 @@ export const ProjectPageTemplate = ({
 }) => {
   const PostContent = contentComponent || Content
   return (
-    <div className="fade-in-element">
-        <HeaderOverlay title={title} subtitle={description} />
-        <div className="main">
-          <section className="section">
-            {helmet || ''}
-            <div className="container content fade-in-element">
-              <div className="columns">
-                <div className="column is-12">
-                  <PostContent content={content} />
-                  <Link to={`/`}><p style={{textAlign: "center"}}>Back</p></Link>
+    <Wrapper>
 
-
-
-
-                </div>
-              </div>
-            </div>
-          </section>
+      {helmet || ''}
+      <div className="title">
+        <h1 className="has-text-weight-bold is-size-2">{title}</h1>
+        <h3>{description}</h3>
       </div>
-    </div>
+      <div className="columns">
+        <div className="column is-12">
+          <PostContent content={content} />
+          <Link to={`/`}><p style={{ textAlign: "center" }}>Back</p></Link>
+
+
+
+
+        </div>
+      </div>
+    </Wrapper>
   )
 }
 
@@ -98,7 +98,7 @@ const ProjectPage = ({ data }) => {
               <meta name="description" content={`${post.frontmatter.description}`} />
             </Helmet>
           }
-         // tags={post.frontmatter.tags}
+          // tags={post.frontmatter.tags}
           title={post.frontmatter.title}
         />
       </Layout>

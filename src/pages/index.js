@@ -64,43 +64,36 @@ export default class IndexPage extends React.Component {
     return (
       <Wrapper>
         <Layout>
-          <div className="fade-in-element">
-            <HeaderOverlay title={"Anthony Calizar"} subtitle={"Design & Development Professional"} />
-            <div className="main">
-              <section className="section">
-                <div className="container">
-                  <div className="content">
-                    <div className="columns is-multiline">
-                      <div className="column is-three-fifths is-offset-one-fifth">
-                        <div className="content tile about" style={{ "textAlign": "center" }}>
-                          <p>Hello! I am a designer and developer based in the Bay Area, CA area. Starting out as a passionate web and graphic designer, I have grown to love multiple disciplines – specifically around UX design and UI development. At the end of the day, I simply just like to create. I have a strong background in marketing design, web development, and user experience.</p>
-                          <p><strong><a href="https://linkedin.com/in/acalizar">LinkedIn</a></strong></p>
-                        </div>
-                      </div>
-                      {posts
-                        .map(({ node: post }, index) => (
-                          <div className="column is-4" key={index}>
-                            <div className="content tile" key={post.id}>
-                              <h2>
-                                <Link to={post.fields.slug} style={{ "fontSize": "24px" }}>
-                                  {post.frontmatter.title}
-                                </Link>
-                              </h2>
-                              <Link to={post.fields.slug}>
-                                <div className="thumbnail"><img src={post.frontmatter.thumbnail} alt={post.frontmatter.title} /></div>
-                              </Link>
-                              <p>
-                                <Link className="button is-link" to={post.fields.slug}>View →</Link>
-                              </p>
-                            </div>
-                          </div>
-                        ))
-                      }
-                    </div>
+          <div className="title">
+            <h1 className="has-text-weight-bold is-size-2">Anthony Calizar</h1>
+            <h3>Design & Development Professional</h3>
+          </div>
+          <div className="columns is-multiline">
+            <div className="column is-three-fifths is-offset-one-fifth">
+              <div className="content tile about" style={{ "textAlign": "center" }}>
+                <p>Hello! I am a designer and developer based in the Bay Area, CA area. Starting out as a passionate web and graphic designer, I have grown to love multiple disciplines – specifically around UX design and UI development. At the end of the day, I simply just like to create. I have a strong background in marketing design, web development, and user experience.</p>
+                <p><strong><a href="https://linkedin.com/in/acalizar">LinkedIn</a></strong></p>
+              </div>
+            </div>
+            {posts
+              .map(({ node: post }, index) => (
+                <div className="column is-4" key={index}>
+                  <div className="content tile" key={post.id}>
+                    <h2>
+                      <Link to={post.fields.slug} style={{ "fontSize": "24px" }}>
+                        {post.frontmatter.title}
+                      </Link>
+                    </h2>
+                    <Link to={post.fields.slug}>
+                      <div className="thumbnail"><img src={post.frontmatter.thumbnail} alt={post.frontmatter.title} /></div>
+                    </Link>
+                    <p>
+                      <Link className="button is-link" to={post.fields.slug}>View →</Link>
+                    </p>
                   </div>
                 </div>
-              </section>
-            </div>
+              ))
+            }
           </div>
         </Layout>
       </Wrapper>

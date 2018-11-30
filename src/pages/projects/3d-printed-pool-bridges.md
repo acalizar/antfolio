@@ -6,7 +6,6 @@ description: Standalone pool bridges intented for 1-handed players
 thumbnail: './uploads/bridge-render-feature.jpg'
 tags:
   - design
-  - develop
 ---
 
 ![bridge-render-feature](/uploads/bridge-render-feature.jpg)
@@ -108,3 +107,5 @@ I used a 3D printing website to print my models. I simply had to upload my file,
 
 </div>
 </div>
+
+<br/>

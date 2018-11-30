@@ -31,15 +31,14 @@ const Overlay = styled.div`
     }
     .block-item{
         height: 180px;
-        box-shadow: 0px 0px 100px -10px rgba(0,0,0,.5);
-        transition: ease-in-out all .2s;
+        transition: ease-in-out all .5s;
     }
         
 `
 export default class HeaderOverlay extends React.Component {
 
     state = {
-        blockItems: [{ background: 'transparent', width: '33.33%'}]
+        blockItems: [{ background: 'transparent', width: '33.33%', 'box-shadow': 'none' }]
     }
 
     componentDidMount() {
@@ -59,7 +58,7 @@ export default class HeaderOverlay extends React.Component {
         let rgb = [red, green, blue];
         let color = "linear-gradient(to right, rgb(" + rgb.toString() + "), rgb(" + Math.round((rgb[0] * .7)) + "," + Math.round((rgb[1] * .7)) + "," + Math.round((rgb[2] * .7)) + "))";
         let size = 'calc(20% + ' + Math.round((Math.floor(Math.random() * 2500))) + 'px)';
-        let styles = { background: color, width: size };
+        let styles = { background: color, width: size, 'box-shadow': '0px 0px 100px -10px rgba(0,0,0,.5)' };
         return styles;
     }
     render() {

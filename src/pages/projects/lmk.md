@@ -2,10 +2,10 @@
 templateKey: project-page
 title: LMK (Electron.js App)
 date: 2018-11-11T15:04:10.000Z
-description: Combine your web-based applications into a single native app
+description: Combine your web-based applications into a single app
 thumbnail: './uploads/lmk-featured.jpg'
+color: '#777777'
 tags:
-  - design
   - develop
 ---
 

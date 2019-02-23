@@ -1,12 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import HeaderOverlay from '../components/HeaderOverlay'
 import styled from 'styled-components'
+//import { kebabCase } from 'lodash'
 
 const Post = styled.div`
   .main > section > .content{
@@ -48,10 +47,6 @@ export const ProjectPageTemplate = ({
         <div className="column is-12">
           <PostContent content={content} />
           <Link to={`/`}><p style={{ textAlign: "center" }}>Back</p></Link>
-
-
-
-
         </div>
       </div>
     </Wrapper>

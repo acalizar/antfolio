@@ -1,7 +1,6 @@
 import React from "react"
 import { navigateTo } from "gatsby-link"
 import Layout from '../../components/Layout'
-import HeaderOverlay from '../../components/HeaderOverlay'
 import styled from "styled-components"
 
 const Wapper = styled.div`

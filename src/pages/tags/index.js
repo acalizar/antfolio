@@ -3,7 +3,6 @@ import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/Layout'
-import HeaderOverlay from '../../components/HeaderOverlay'
 import styled from "styled-components"
 
 const Wrapper = styled.div`

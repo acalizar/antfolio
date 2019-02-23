@@ -48,10 +48,6 @@ const Navbar = () => (
   <Nav>
     <nav className="navbar is-transparent">
       <div className="container">
-        <div className="navbar-brand">
-          <Link to="/" className="navbar-item">
-          </Link>
-        </div>
         <div className="navbar-start">
           <Link className="navbar-item" to="/">
             <figure className="image">

@@ -2,8 +2,9 @@
 templateKey: project-page
 title: Milestone Website
 date: 2018-10-11T15:04:10.000Z
-description: A complete redesign and development of the corporate website
+description: Complete redesign / development of the corporate website
 thumbnail: './uploads/website-new-laptop-phone.png'
+color: '#20534d'
 tags:
   - design
   - develop

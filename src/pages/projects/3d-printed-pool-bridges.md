@@ -1,9 +1,10 @@
 ---
 templateKey: project-page
 title: 3D Printed Pool Bridges
-date: 2018-09-11T15:04:10.000Z
+date: 2018-08-11T15:04:10.000Z
 description: Standalone pool bridges intented for 1-handed players
 thumbnail: './uploads/bridge-render-feature.jpg'
+color: '#484579'
 tags:
   - design
 ---

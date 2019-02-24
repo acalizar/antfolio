@@ -15,7 +15,7 @@ export default () => (
     <Layout>
       <div className="title">
         <h1 className="has-text-weight-bold is-size-2">Thank You!</h1>
-        <h3>I will reach out to you as soon as possible</h3>
+        <h2>I will reach out to you as soon as possible</h2>
       </div>
     </Layout>
   </Wrapper>

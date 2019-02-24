@@ -24,6 +24,10 @@ export default class IndexPage extends React.Component {
         }
         .skills{
           text-align: center;
+          
+          .column{
+            margin-bottom: 50px;
+          }
           img{
             max-width: 200px;
           }
@@ -34,7 +38,7 @@ export default class IndexPage extends React.Component {
         <Layout>
           <div className="title">
             <h1 className="has-text-weight-bold is-size-2">Anthony Calizar</h1>
-            <h3>Design & Development Professional</h3>
+            <h2>Design & Development Professional</h2>
           </div>
           <div className="columns is-multiline">
             <div className="column is-three-fifths is-offset-one-fifth">

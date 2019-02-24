@@ -41,7 +41,7 @@ export const ProjectPageTemplate = ({
       {helmet || ''}
       <div className="title">
         <h1 className="has-text-weight-bold is-size-2">{title}</h1>
-        <h3>{description}</h3>
+        <h2>{description}</h2>
       </div>
       <div className="columns">
         <div className="column is-12">
@@ -52,22 +52,6 @@ export const ProjectPageTemplate = ({
     </Wrapper>
   )
 }
-
-/* 
-//Add this right after Postcontent
-{tags && tags.length ? (
-  <div style={{ marginTop: `4rem` }}>
-    <h4>Tags</h4>
-    <ul className="taglist">
-      {tags.map(tag => (
-        <li key={tag + `tag`}>
-          <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-        </li>
-      ))}
-    </ul>
-  </div>
-) : null}
-*/
 
 ProjectPageTemplate.propTypes = {
   content: PropTypes.node.isRequired,

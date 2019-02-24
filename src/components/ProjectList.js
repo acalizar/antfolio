@@ -37,6 +37,7 @@ export default class ProjectList extends React.Component {
             transition: ease-in-out all .5s;
           .content.tile {
             border-radius: 0px 0px 5px 5px;
+            background-color: #ffffff;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -118,7 +119,6 @@ export default class ProjectList extends React.Component {
               transition: all 500ms ease-in;
             }
     `
-    console.log(this.state.data)
     const items = this.state.data.map(( {node: post}) => (
       <Fade key={post.id} in={post.frontmatter.tags.indexOf(this.state.activeTag) > -1 || this.state.activeTag === "all"} >
         <div className="column is-4">
@@ -132,7 +132,6 @@ export default class ProjectList extends React.Component {
         </div>
       </Fade>
     ));
-   // console.log(items);
     return (
       <ListWrapper>
         <div className="columns">

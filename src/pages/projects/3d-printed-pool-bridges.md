@@ -57,7 +57,7 @@ It was exciting to know that I could explore an idea and have a functional proto
 
 ![bridge-render-acrobat](/uploads/bridge-render-acrobat.jpg)
   #### V1: Acrobat
-  This was my first attempt and unfortunately was never printed. Although I’m almost positive it would have worked and satisfy all of my considerations, it taught me a valuable lesson in 3D printing: <strong>materials are expensive</strong>. Originally, I wanted to print it in metal, however, this particular model would have run upwards to $200+ because it is basically a solid mass. I tried to do things such as hallow it out and it did reduce the cost quite significantly, however, it still was not worth it in my opinion (even in hard plastic). <strong>My new mission was to find a way to make a functional bridge with the least amount of volume</strong>. I certainly might revisit this version as I am happy with the render.
+  This was my first attempt and unfortunately was never printed. Although I’m almost positive it would have worked and satisfy all of my considerations, it taught me a valuable lesson in 3D printing: <strong>materials are expensive</strong>. Originally, I wanted to print it in metal, however, this particular model would have run upwards to $200+ because it is basically a solid mass. I tried to do things such as hollow it out and it did reduce the cost quite significantly, however, it still was not worth it in my opinion (even in hard plastic). <strong>My new mission was to find a way to make a functional bridge with the least amount of volume</strong>. I certainly might revisit this version as I am happy with the render.
 </div>
 </div>
 <div class="columns">

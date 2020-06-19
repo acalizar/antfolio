@@ -43,7 +43,7 @@ export default class IndexPage extends React.Component {
           <div className="columns is-multiline">
             <div className="column is-three-fifths is-offset-one-fifth">
               <div className="content tile about" style={{ "textAlign": "center" , "display": "block"}}>
-                <p>Hello! I am a designer and developer based in the Bay Area, CA area. Starting out as a passionate web and graphic designer, I have grown to love multiple disciplines – specifically around UX design and UI development. At the end of the day, I simply just like to create. I have a strong background in marketing design, web development, and user experience. </p>
+                <p>Hello! I am a designer and developer based in Bay Area, CA. Starting out as a passionate web and graphic designer, I have grown to love multiple disciplines – specifically around front-end development and UX design. At the end of the day, I simply just like to create. I have a strong background in web development, marketing design, and user experience. </p>
                 <p><strong><a target="blank" href="https://linkedin.com/in/acalizar" >LinkedIn</a></strong></p>
               </div>
             </div>
@@ -51,7 +51,7 @@ export default class IndexPage extends React.Component {
           <div className="columns skills">
             <div className="column is-4"><img src="/uploads/web-design-dev.svg"/><hr/><h3>HTML, CSS, JavaScript, Web Applications</h3></div>
             <div className="column is-4"><img src="/uploads/gd-branding.svg"/><hr/><h3>Graphic Design, Marketing, Branding </h3></div>
-            <div className="column is-4"><img src="/uploads/ui-ux.svg"/><hr/><h3>UX Design, UI Development</h3></div>
+            <div className="column is-4"><img src="/uploads/ui-ux.svg"/><hr/><h3>Front-end Development, UI Design</h3></div>
           </div>
         <div className="bg-grey">
         <h2>A Few Projects</h2>

@@ -1,0 +1,64 @@
+
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.bg {
+	padding-top: 50px;
+	margin-bottom: 100px;
+	position: relative;
+
+	&:before {
+		content: "";
+		position: absolute;
+		height: 100%;
+		width: 200vw;
+		left: -100vw;
+		top: auto;
+		z-index: -1;
+	}
+
+	&-gray:before {
+		background: color(light-gray);
+	}
+}
+
+.icon {
+	ul {
+		padding-inline-start: 0;
+		list-style-type: none;
+
+		li {
+			padding: 0;
+
+			&:before {
+				font-family: "Material Icons";
+				margin: 0 10px;
+				position: relative;
+				top: 3px;
+			}
+		}
+	}
+
+	&.red-list {
+		color: red;
+
+		li:before {
+			content: "\e888";
+		}
+	}
+
+	&.green-list {
+		color: green;
+
+		li:before {
+			content: "\e876";
+		}
+	}
+}
+
+.center {
+	text-align: center;
+}
+
+.no-margin-bottom {
+	margin-bottom: 0;
+}

@@ -1,0 +1,17 @@
+@function color($color) {
+	$colors: (
+		"paper": #fafafa,
+		"light-gray": #f1f1f1,
+		"medium-gray": #a3a3a3,
+		"default": #4a4a4a,
+		"dark": #000000,
+		"link": #3273dc,
+		"dark-blue": #597bc2
+	);
+	@if map-get($colors, $color) == null {
+		@warn "'#{$color}' is not an available swatch... available colors: #{map-keys($colors)}";
+		@return "";
+	} @else {
+		@return map-get($colors, $color);
+	}
+}

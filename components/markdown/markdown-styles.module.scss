@@ -1,0 +1,20 @@
+@import '../../styles/mixins/mixins.scss';
+
+.markdown {
+	max-width: 800px;
+	padding: 0 30px;
+	margin: 50px auto;
+
+	h3, h4 {
+		margin-bottom: 0;
+		font-weight: normal;
+	}
+
+	img {
+		width: 100%;
+	}
+
+	hr {
+		margin-bottom: 0;
+	}
+}

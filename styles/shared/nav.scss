@@ -1,0 +1,38 @@
+nav {
+	position: relative;
+	background: rgba(0, 0, 0, 0.7);
+	padding: 15px;
+	opacity: 0.85;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: color(medium-gray);
+		transition: ease-in-out 0.25s;
+		font-size: 30px;
+		margin: 0px 10px;
+
+		.logo {
+			margin-right: 10px;
+			border: 2px solid color(medium-gray);
+			border-radius: 50px;
+			height: 40px;
+			width: 40px;
+			transition: ease-in-out 0.25s;
+		}
+
+		&:hover {
+			color: color(paper);
+			text-decoration: none;
+
+			.logo {
+				border-color: color(paper);
+			}
+		}
+	}
+}

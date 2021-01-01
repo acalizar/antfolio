@@ -1,65 +1,88 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
+import Image from 'next/image'
+// import { getProjectList } from '../lib/markdown-list';
+import {getProjectList, RenderProjectList} from '../components/project-list/ProjectList';
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+export default function Home({ projects }) {
+	return (
+		<div className={styles.wrapper}>
+			<Head>
+				<title>Anthony Calizar</title>
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+			<div className={styles.container}>
+				<div className="title">
+					<h1 className="header">
+						Anthony Calizar
+					</h1>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+					<h2 className="subhead">
+						Design. Develop. Create.
+					</h2>
+				</div>
+				{/* {paths()} */}
+				{/* <div className={styles.intro}>
+					<p className={styles.description}>
+						Hello! I am a designer and developer based in Bay Area, CA. Starting out as a passionate web and graphic designer, I have grown to love multiple disciplines – specifically around front-end development and UX design. At the end of the day, I simply just like to create. I have a strong background in web development, marketing design, and user experience.
+					</p>
+					<p>
+						<strong>
+							<a target="blank" href="https://linkedin.com/in/acalizar" >LinkedIn</a>
+						</strong>
+					</p>
+				</div> */}
+				<div className={styles.content}>
+					<div className="container">
+						<div className="grid">
+							<div className={`col-4 ${styles["tile"]}`}>
+								<Image
+									src="/overview/icon-web-design-dev.svg"
+									alt="HTML, CSS, JavaScript, Web Applications"
+									width={200}
+									height={200}
+								/>
+								<h3>HTML, CSS, JavaScript, Web Applications</h3>
+							</div>
+							<div className={`col-4 ${styles["tile"]}`}>
+								<Image
+									src="/overview/icon-front-end.svg"
+									alt="Front-end Development, UI Design"
+									width={200}
+									height={200}
+								/>
+								<h3>Front-end Development, UI Design</h3>
+							</div>
+							<div className={`col-4 ${styles["tile"]}`}>
+								<Image
+									src="/overview/icon-branding.svg"
+									alt="Graphic Design, Marketing, Branding"
+									width={200}
+									height={200}
+								/>
+								<h3>Graphic Design, Marketing, Branding</h3>
+							</div>
+						</div>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+						<div className="bg bg-gray">
+							<h2 id="featured-projects" className="center">Featured Projects</h2>
+							<RenderProjectList projects={projects} />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	)
+}
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+export async function getStaticProps() {
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+	const projects = getProjectList();
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+	return {
+		props: {
+			projects
+		}
+	};
 }

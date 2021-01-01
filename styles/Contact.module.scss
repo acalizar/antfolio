@@ -1,0 +1,17 @@
+@import './mixins/mixins.scss';
+
+.wrapper {
+	min-height: 900px;
+
+	.form {
+		max-width: 650px; 
+		margin: 100px auto 0;
+		padding: 20px;
+		background: linear-gradient(color(light-gray), color(paper));
+		height: 400px;
+	
+		.submit {
+			text-align: right;
+		}
+	}
+}

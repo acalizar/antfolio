@@ -1,0 +1,97 @@
+$column-gap: 15px;
+
+.grid {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: calc(100% + #{$column-gap});
+	margin-right: -$column-gap;
+
+	.col {
+		display: flex;
+		flex-direction: column;
+		padding-right: $column-gap;
+	}
+
+	.col-1 {
+		width: 100%;
+		flex-basis: 100%;
+	}
+
+	.col-2 {
+		width: 16.6667%;
+		flex-basis: 16.6667%;
+	}
+
+	.col-3 {
+		width: 25%;
+		flex-basis: 25%;
+	}
+
+	.col-4 {
+		width: 33.33%;
+		flex-basis: 33.33%;
+	}
+
+	.col-6 {
+		width: 50%;
+		flex-basis: 50%;
+	}
+
+	.col-7 {
+		width: 58.3333%;
+		flex-basis: 58.3333%;
+	}
+
+	.col-8 {
+		width: 66.6667%;
+		flex-basis: 66.6667%;
+	}
+
+	.col-9 {
+		width: 75%;
+		flex-basis: 75%;
+	}
+
+	.col-10 {
+		width: 83.3333%;
+		flex-basis: 83.3333%;
+	}
+
+	.col-11 {
+		width: 91.6667%;
+		flex-basis: 91.6667%;
+	}
+
+	.col-12 {
+		width: 100%;
+		flex-basis: 100%;
+	}
+}
+
+@media (max-width: 768px) {
+	.grid {
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+
+		.col {
+			padding: 0;
+		}
+		
+		.col-1,
+		.col-2,
+		.col-3,
+		.col-4,
+		.col-5,
+		.col-6,
+		.col-7,
+		.col-8,
+		.col-9,
+		.col-10,
+		.col-11	{
+			width: 100%;
+			flex-basis: 100%;
+		}
+	}
+}

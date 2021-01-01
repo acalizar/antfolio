@@ -10,7 +10,7 @@ function encode(data) {
 }
 
 
-export default class Index extends React.Component {
+export default class Contact extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = { isValidated: false, currentScrollHeight: 0 };
@@ -95,6 +95,3 @@ export default class Index extends React.Component {
 		);
 	}
 }
-
-
-

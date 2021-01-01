@@ -20,5 +20,8 @@
     "sass": "^1.30.0",
     "styled-components": "^5.2.1",
     "unified": "^9.2.0"
+  },
+  "devDependencies": {
+    "@netlify/plugin-nextjs": "^1.0.3"
   }
 }

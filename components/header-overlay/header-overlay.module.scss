@@ -1,0 +1,78 @@
+@import '../../styles/mixins/mixins.scss';
+
+.container {
+	z-index: -1000;
+	position: fixed;
+	width: 100%;
+	top: -50px;
+	transform: translate3d(0,0,0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-perspective: 1000;
+	perspective: 1000;
+	background: color(dark);
+
+	.block-row {
+		position: relative;
+		display: flex;
+		width: 130%;
+		transform: skewY(-12deg) translateZ(0);
+		transform-origin: 0;
+		margin-top: -1px;
+	
+		.block-item {
+			height: 180px;
+			margin-left: -1px;
+			transform: translateZ(0);
+		}
+	}
+
+	&.active {
+		.block-row {
+			&:nth-child(3n + 1) {
+				.block-item:nth-child(2) {
+					animation: adjustWidth-0 12s infinite alternate-reverse linear;
+				}
+			}
+
+			&:nth-child(3n + 2) {
+				.block-item:nth-child(2) {
+					animation: adjustWidth-1 8s infinite alternate-reverse linear;
+				}
+			}
+
+			&:nth-child(3n + 3) {
+				.block-item:nth-child(2) {
+					animation: adjustWidth-2 10s infinite alternate-reverse linear;
+				}
+			}
+		}
+	}
+}
+
+@keyframes adjustWidth-0 {
+	from {
+		width: 60%;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+@keyframes adjustWidth-1 {
+	from {
+		width: 80%;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+@keyframes adjustWidth-2 {
+	from {
+		width: 70%;
+	}
+	to {
+		width: 120%;
+	}
+}

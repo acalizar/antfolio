@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import './mixins/mixins.scss';
+@import './shared/settings.scss';
+@import './shared/grid.scss';
+@import './shared/nav.scss';
+@import './shared/form.scss';
+@import './shared/footer.scss';
+
+$default-color: color(default);
+
+// Custom scrollbar
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+	padding: 2px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #333333;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	font-size: 20px;
+	padding: 0;
+	margin: 0;
+	font-family: 'Lato', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, 'Helvetica Neue', sans-serif;
+	color: $default-color;
+	font-weight: 300;
+}
+.content-wrapper {
+	position: relative;
+	z-index: 1;
+	margin-top: 300px;
+
+	&:before {
+		content: "";
+		background-color: color(paper);
+		position: absolute;
+		top: 355px;
+		bottom: -1000px;
+		left: 0;
+		right: 0;
+		transform: skewY(-12deg);
+		transform-origin: top;
+		z-index: -1;
+	}
+}
+
+main {
+	overflow: hidden;
+	margin-top: -70px;
+}
+
+.container {
+	max-width: 1344px;
+	margin: 0 auto;
+	padding: 0 30px;
+}
+
+h1 {
+	font-size: 28px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+h4 {
+	font-size: 22px;
+}
+
+p {
+	margin-bottom: 0;
+}
+
+a {
+	color: color(link);
+	text-decoration: none;
+
+	&:hover {
+		color: $default-color;
+		text-decoration: underline;
+	}
+}
+
+hr {
+	width: 100%;
+	background-color: color(medium-gray);
+	border: none;
+	display: block;
+	height: 1px;
+	margin: 1.5rem 0;
+}
+
+code {
+	background: #fafafa;
+	border-radius: 5px;
+	padding: 0.75rem;
+	font-size: 1.1rem;
+	font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+		Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.title {
+	text-align: center;
+	margin-bottom: 0.8em;
+	padding: 0 30px;
+
+	.header {
+		color: color("paper");
+		margin: 0;
+		font-size: 3rem;
+		margin-bottom: 0;
+	}
+
+	.subhead {
+		color: color("light-gray");
+		margin-top: 0.3em;
+		font-size: 2rem;
+		font-weight: 300;
+		margin-bottom: 0;
+	}
+}
